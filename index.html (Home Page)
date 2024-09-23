@@ -1,25 +1,131 @@
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammad Nabeel Hasan | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="#">Nabeel Hasan</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <button id="dark-mode-toggle" class="btn btn-outline-light ml-3">Dark Mode</button>
+    </div>
+  </nav>
 
-.hero-section {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-    height: 100vh;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="container text-center">
+      <h1 class="animate__animated animate__fadeInDown">Hello, I'm Mohammad Nabeel Hasan</h1>
+      <p class="animate__animated animate__fadeInUp">Software Engineer | Web Developer | Problem Solver</p>
+      <a href="#projects" class="btn btn-primary animate__animated animate__fadeInUp">See My Work</a>
+    </div>
+  </header>
 
-header h1 {
-    font-size: 4rem;
-}
+  <!-- About Me Section -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <h2 class="text-center">About Me</h2>
+      <p>I am a passionate software engineer with expertise in Java, Python, web development, and server management. With hands-on experience and problem-solving skills, I am committed to creating efficient, user-friendly solutions.</p>
+    </div>
+  </section>
 
-header p {
-    font-size: 1.5rem;
-}
+  <!-- Skills Section -->
+  <section id="skills" class="bg-light section-padding">
+    <div class="container">
+      <h2 class="text-center">Skills</h2>
+      <div class="row text-center">
+        <div class="col-md-3 skill-item"><i class="fab fa-java fa-3x"></i><h4>Java</h4></div>
+        <div class="col-md-3 skill-item"><i class="fab fa-python fa-3x"></i><h4>Python</h4></div>
+        <div class="col-md-3 skill-item"><i class="fab fa-html5 fa-3x"></i><h4>HTML & CSS</h4></div>
+        <div class="col-md-3 skill-item"><i class="fab fa-linux fa-3x"></i><h4>Linux</h4></div>
+      </div>
+    </div>
+  </section>
 
-.card {
-    margin-bottom: 20px;
-}
+  <!-- Projects Section -->
+  <section id="projects" class="section-padding">
+    <div class="container">
+      <h2 class="text-center">Projects</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card project-card animate__animated animate__fadeInUp">
+            <img src="img/covid-tracker.png" class="card-img-top" alt="Covid Tracker">
+            <div class="card-body">
+              <h5 class="card-title">Covid-19 Tracker Website</h5>
+              <p class="card-text">HTML, CSS, jQuery | A website that tracks COVID-19 cases across countries using API.</p>
+              <a href="https://covidtrackerproject.netlify.app/" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project-card animate__animated animate__fadeInUp">
+            <img src="img/tictactoe.png" class="card-img-top" alt="Tic Tac Toe">
+            <div class="card-body">
+              <h5 class="card-title">Tic-Tac-Toe Game App</h5>
+              <p class="card-text">Java | A fun and interactive Android app for Tic-Tac-Toe game lovers.</p>
+              <a href="https://github.com/Nabeel-97/TicTacToe" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project-card animate__animated animate__fadeInUp">
+            <img src="img/travel-site.png" class="card-img-top" alt="Travel Website">
+            <div class="card-body">
+              <h5 class="card-title">Tour And Travel Website</h5>
+              <p class="card-text">HTML, CSS, PHP, MySQL | A dynamic travel management system with admin and user panels.</p>
+              <a href="https://iueventmaster.herokuapp.com/" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-light section-padding">
+    <div class="container">
+      <h2 class="text-center">Contact Me</h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="animate__animated animate__fadeInUp">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center bg-dark text-white py-4">
+    <p>&copy; 2024 Mohammad Nabeel Hasan | All Rights Reserved</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
