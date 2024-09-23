@@ -1,42 +1,57 @@
 /* Global Styles */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.5s, color 0.5s;
 }
 
-/* Hero Section */
+.navbar-brand, .nav-link {
+  transition: color 0.5s;
+}
+
 .hero-section {
   background: url('img/hero-bg.jpg') no-repeat center center/cover;
-  color: white;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.hero-section h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
+.hero-section h1, .hero-section p {
+  transition: transform 0.5s;
 }
 
-.hero-section p {
-  font-size: 1.5rem;
+/* Skill Icons */
+.skill-item {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  transition: transform 0.3s;
 }
 
-/* Section Padding */
-.section-padding {
-  padding: 60px 0;
+.skill-item:hover {
+  transform: translateY(-10px);
 }
 
-/* Footer */
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
+/* Project Cards */
+.project-card {
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark-mode .navbar-dark .navbar-brand, .dark-mode .nav-link {
+  color: white;
 }
